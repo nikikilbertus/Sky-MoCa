@@ -1,6 +1,6 @@
 # Sky-MoCa
 
-Skyrmion - Monte Carlo: Simulated annealing with the Metropolis algorithm for a 3D spin lattice
+> Skyrmion - Monte Carlo: Simulated annealing with the Metropolis algorithm for a 3D spin lattice
 
 :warning: **This code was tested with Julia 0.4. Due to breaking changes it does not work with Julia 0.5.x.**
 
@@ -71,11 +71,11 @@ Now we can setup the global parameters on a 30<sup>3</sup> grid with open bounda
 ```julia
 anneal = Schedule(Ts, Bs, therm, sweeps, configs)
 pars = Parameters(anneal, Nx=42, Ny=42, Nz=30, openbnd=true, denseoutput=false)
-mon, res = init(anneal);
+mon, res = init(anneal)
 ```
 
 :fire: Fire it up! :fire:
 
 ```julia
-run("output", anneal);
+run("output", anneal)
 ```
