@@ -1,0 +1,10 @@
+# jupyter notebooks
+*.ipynb_checkpoints
+
+# vim swap files
+*.swp
+*.swo
+*.swl
+
+# Mac OS
+.DS_Store
