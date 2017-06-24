@@ -4,6 +4,8 @@
 
 :warning: **This code was tested with Julia 0.4. Due to breaking changes it does not work with Julia 0.5.x.**
 
+A flexible and easy-to-use implementation of simulated annealing for a three-dimensional lattice with three-dimensional spins at each vertex. Two detailed reports of the computational as well as physical aspects of this project respectively can be found [here](https://github.com/nikikilbertus/report_sky-moca). The repository also contains all tools to create awesome visualizations of the 3D spin lattices, skyrmion phases and much more.
+
 ![skyrmion tubes](images/skyrmions.png)
 
 ## Physics
@@ -66,7 +68,7 @@ We average over 2000 configurations during cooling and 1000 configurations after
 configs = vcat(fill(2000, length(Ts)), fill(1000, length(Bs)-1))
 ```
 
-Now we can setup the global parameters on a 30<sup>3</sup> grid with open boundaries in the z direction (boundaries in the x and y direction are always periodic)
+Now we can setup the global parameters on a 42 x 42 x 30 grid with open boundaries in the z direction (boundaries in the x and y direction are always periodic)
 
 ```julia
 anneal = Schedule(Ts, Bs, therm, sweeps, configs)
