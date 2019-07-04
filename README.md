@@ -2,9 +2,10 @@
 
 > Skyrmion - Monte Carlo: Simulated annealing with the Metropolis algorithm for a 3D spin lattice
 
-:warning: **This code was tested with Julia 0.4. Due to breaking changes it does not work with Julia 0.5.x.**
+This code was last tested with Julia 1.1.0.
 
-A flexible and easy-to-use implementation of simulated annealing for a three-dimensional lattice with three-dimensional spins at each vertex. Two detailed reports of the computational as well as physical aspects of this project respectively can be found [here](https://github.com/nikikilbertus/report_sky-moca). The repository also contains all tools to create awesome visualizations of the 3D spin lattices, skyrmion phases and much more.
+A flexible and easy-to-use implementation of simulated annealing for a three-dimensional lattice with three-dimensional spins at each vertex. Two detailed reports of the computational as well as physical aspects of this project can be found [here](https://github.com/nikikilbertus/report_sky-moca). The repository also contains all tools to create awesome visualizations of the 3D spin lattices, skyrmion phases, and much more.
+This implementation is more of an educational nature, as all computations are written out quite explicitly.
 
 ![skyrmion tubes](images/skyrmions.png)
 
@@ -27,14 +28,18 @@ The only _free parameters_ are the external field B and the temperature T. In th
 The following Julia packages are used in the simulation
 
 * `HDF5`
-* `StatsBase`
+* `LinearAlgebra`
 * `ProgressMeter`
+* `Random`
+* `Statistics`
 
 For the post processing and visualization we use
 
+* `DelimitedFile`
+* `FFTW`
 * `PyPlot`
 * `LsqFit`
-* `Images`
+* `StatsBase`
 
 There is also an additional Mathematica notebook for more beautiful plots and images.
 
